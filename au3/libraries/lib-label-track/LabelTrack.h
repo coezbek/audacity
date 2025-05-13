@@ -126,6 +126,7 @@ public:
 
     static const FileNames::FileType SubripFiles;
     static const FileNames::FileType WebVTTFiles;
+    static const FileNames::FileType AllSupportedFiles;   
 
 private:
     Track::Holder Clone(bool backup) const override;

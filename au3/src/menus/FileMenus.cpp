@@ -375,12 +375,12 @@ void OnImportLabels(const CommandContext& context)
     auto& window = GetProjectFrame(project);
 
     wxString fileName
-        =SelectFile(FileNames::Operation::Open,
+        = SelectFile(FileNames::Operation::Open,
                     XO("Select a text file containing labels"),
                     wxEmptyString, // Path
                     wxT(""), // Name
-                    wxT("txt"), // Extension
-                    { FileNames::TextFiles, LabelTrack::SubripFiles, FileNames::AllFiles },
+                    wxT(""), // Extension
+                    { LabelTrack::AllSupportedFiles, FileNames::TextFiles, LabelTrack::SubripFiles, FileNames::AllFiles },
                     wxRESIZE_BORDER, // Flags
                     &window); // Parent
 
